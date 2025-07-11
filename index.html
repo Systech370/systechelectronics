@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SYSTECH ELECTRONICS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SYSTECH ELECTRONICS</h1>
+    <p>Your One-Stop Shop for Printing Machines, Plotters, Laptops & More</p>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button onclick="toggleDarkMode()" id="darkModeBtn">🌙 Dark Mode</button>
+  </header>
+
+  <section>
+    <h2>Our Services</h2>
+    <ul>
+      <li>🛠️ Buy, Sell, & Repair of Printing Machines</li>
+      <li>📐 Plotter Machine Services</li>
+      <li>💻 PC & Laptop Repairs</li>
+      <li>📹 CCTV Installation</li>
+      <li>🆔 ID Card Machine Setup</li>
+      <li>📢 Flex Banner Machines Sales & Repair</li>
+    </ul>
+  </section>
+<section>
+  <h2>Our Products</h2>
+  <div class="slider">
+    <div class="slide">
+      <a href="images/ima-hp-hp-latex-47644.webp" target="_blank">
+         <img src="images/ima-hp-hp-latex-47644.webp" alt="Large Format Machine">
+      </a>
+     <p>Large Format Machine</p>
+    </div>
+
+    <div class="slide">
+      <a href="images/Epson-Expression-Home-XP-4105-Wireless-All-in-One-Color-Inkjet-Printer-WiFi_a1e72e07-c525-45b9-a40a-0f9630f99f56_1.f4d8b0c17a102dae59da29d814bdbaf3.webp" target="_blank">
+          <img src="images/Epson-Expression-Home-XP-4105-Wireless-All-in-One-Color-Inkjet-Printer-WiFi_a1e72e07-c525-45b9-a40a-0f9630f99f56_1.f4d8b0c17a102dae59da29d814bdbaf3.webp" alt="Epson InkJet Printer">
+      </a>
+     <p>Epson InkJet Printer</p>
+    </div>
+    <div class="slide">
+      <img src="images/71YO6nI8d0L._AC_SL1500_.jpg" alt="Canon Printer">
+      <p>Canon Printer</p>
+    </div>
+    <div class="slide">
+      <img src="images/1.jpg" alt="Laptop">
+      <p>High-Performance Laptop</p>
+    </div>
+    <div class="slide">
+      <img src="images/hp-computer-printer-20240503155838726.jpg" alt="Hp Printer">
+      <p>Hp Printer</p>
+    </div>
+    <div class="slide">
+      <img src="images/81GqAVT0wIL._AC_SL1500_.jpg" alt="DTF Machine">
+      <p>DTF Machine</p>
+    </div>
+    <div class="slide">
+      <img src="images/61yeNC1PN9L._AC_SL1500_.jpg" alt="UV DTF Machine">
+      <p>UV DTF Machine</p>
+    </div>
+    <div class="slide">
+    <img src="images/61IaId7+7QL._AC_SL1500_.jpg" alt="Cutter Plotter">
+      <p>Cutter Plotter</p>
+    </div>
+    <div class="slide">
+      <img src="images\Mimage-M16S-M18S-Large-format-Printer-details-1.jpg" alt="Banner Flex Machine">
+      <p>Banner Flex Machine</p>
+    </div>
+    <div class="slide">
+        <img src="images/61rnKZAj4-L._AC_SL1500_.jpg" alt="CCTV">    
+        <p>CCTV</p>
+    </div>
+   </div> 
+</section>
+
+</section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <p>📞 Call: +234-XXX-XXX-XXXX</p>
+    <p>💬 <a href="https://wa.me/234XXXXXXXXXX" target="_blank">Chat on WhatsApp</a></p>
+  </section>
+<section>
+  <img src="images/C-641-STICKERS-FRONT-FACING-WHITE-TAKE-UP.png" alt="Systech Electronics Shop" width="100%">
+</section>
+
+  <footer>
+    <p>&copy; 2025 SYSTECH ELECTRONICS. All Rights Reserved.</p>
+  </footer>
+  <script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const btn = document.getElementById("darkModeBtn");
+    if (document.body.classList.contains("dark-mode")) {
+      btn.textContent = "☀️ Light Mode";
+    } else {
+      btn.textContent = "🌙 Dark Mode";
+    }
+  }
+</script>
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Product Preview">
+</div>
+<script>
+  // When any product image is clicked
+  document.querySelectorAll('.slide img').forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.preventDefault();
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      lightbox.style.display = "flex";
+      lightboxImg.src = this.src;
+    });
+  });
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/2348037021291" 
+   class="whatsapp-float" 
+   target="_blank" 
+   title="Chat with us on WhatsApp">
+  <img src="images/WhatsApp.svg" alt="WhatsApp" width="60" height="60">
+</a>
+</body>
+</html>
